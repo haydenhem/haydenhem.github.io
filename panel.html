@@ -27,7 +27,7 @@ checkbox = pn.widgets.Checkbox(name='Checkbox')
 def callback(new):
     return f'Amplitude is: {new}'
 
-row = pn.Row(slider, checkbox);
+row = pn.Row(slider, checkbox, pn.bind(checkbox, slider)).servable(target='simple_app'););
 row
     </py-script>
 </body>
