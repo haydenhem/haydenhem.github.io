@@ -27,10 +27,11 @@ p1.line([1, 2, 3], [1, 2, 3])
 tabs = pn.Tabs(p1).servable(target='simple_app');
 # Add a tab
 tabs.append(('Slider', pn.widgets.FloatSlider()))
-
+p21= pn.widgets.FloatSlider(start=0, end=10, name='POG')
+p22 = pn.widgets.Checkbox(name='Checkbox')
 # Add multiple tabs
 tabs.extend([
- ('Text', pn.widgets.TextInput()),
+ ('Text', p21, p22),
  ('Color', pn.widgets.ColorPicker())
       ])
 
