@@ -21,7 +21,7 @@
     <py-script>
 import panel as pn
 from bokeh.plotting import figure
-
+pn.extension()
 slider = pn.widgets.FloatSlider(start=0, end=10, name='POG')
 checkbox = pn.widgets.Checkbox(name='Checkbox')
 
