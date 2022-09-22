@@ -23,8 +23,10 @@ import panel as pn
 from bokeh.plotting import figure
 pn.extension()
 
-slider = pn.widgets.FloatSlider(start=0, end=10, name='POG')
+slider = pn.widgets.IntSlider(start=0, end=10, name='POG')
 checkbox = pn.widgets.Checkbox(name='Checkbox')
+while checkbox.value = True:
+     print(callback(slider))
 
 def callback(new):
     return f'Amplitude is: {new}'
