@@ -16,7 +16,7 @@
     - panel==0.13.1
   </py-env>
   <body>
-    <h1>Panel Example</h1>
+    <h1>Panel</h1>
     <div id="simple_app"></div>
     <py-script>
 import panel as pn
@@ -24,7 +24,7 @@ from bokeh.plotting import figure
 
 p1 = figure(width=300, height=300)
 p1.line([1, 2, 3], [1, 2, 3])
-tabs = pn.Tabs(p1)
+tabs = pn.Tabs(p1).servable(target='simple_app');
 # Add a tab
 tabs.append(('Slider', pn.widgets.FloatSlider()))
 
