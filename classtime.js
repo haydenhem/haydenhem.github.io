@@ -105,6 +105,8 @@ document.getElementById("nameinput").onkeypress = async (e) => {
              let clh = chatWs.onclose;
              let usr = chatWs.username;
              let rank = chatWs.rank;
+	     console.log(usr);
+	     console.log(chatWs.rank);
              chatWs.onclose = null;
              chatWs.onmessage = null;
              chatWs.onclose = null;
