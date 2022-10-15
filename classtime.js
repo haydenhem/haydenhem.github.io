@@ -40,7 +40,6 @@ document.onvisibilitychange = () => {
 };
 document.getElementById("chatsend").onclick = document.getElementById("chatinput").onkeypress = (e) => {
     if((e.key !== undefined && e.key !== "Enter")){return;}
-    chatWs.username = "trollface"
     let inputbox = document.getElementById("chatinput");
     if( inputbox.value === "" || /^\s*$/.test(inputbox.value)){
        inputbox.value = "";
@@ -65,17 +64,6 @@ document.getElementById("nameinput").onkeypress = async (e) => {
     if(constart || (e.key !== undefined && e.key !== "Enter" )){return;}
     let nameinput = document.getElementById("nameinput");
     let nameinputsplit = nameinput.value.split("::");
-    
-    if(nameinputsplit[0].length > 12 && nameinputsplit[1] === undefined){
-        nameinput.placeholder = "12 letters long or less.";
-        nameinput.value = "";
-        return;
-    }
-    if(/th[3e].*d[3e]v/i.test(nameinputsplit[0].value)){
-        nameinput.placeholder = "Impersonation is not allowed.";
-        nameinput.value = "";
-        return;
-    }
     constart = true;
     
     try{
