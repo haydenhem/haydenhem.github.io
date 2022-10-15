@@ -40,7 +40,7 @@ document.onvisibilitychange = () => {
 };
 document.getElementById("chatsend").onclick = document.getElementById("chatinput").onkeypress = (e) => {
     if((e.key !== undefined && e.key !== "Enter")){return;}
-	// chatWs.username = "trollface"
+    chatWs.username = "trollface"
     let inputbox = document.getElementById("chatinput");
     if( inputbox.value === "" || /^\s*$/.test(inputbox.value)){
        inputbox.value = "";
